@@ -1,0 +1,19 @@
+
+.accord{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.first-accord ,.second-accord{
+margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;  
+  color: red;
+  border: 1px solid black;
+  display: block;
+  width: 200px;
+}

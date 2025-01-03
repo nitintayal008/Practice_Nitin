@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Search Here : </label>
+    <input type="text" id="search-bar" />
+    <input type="text" onkeyup="getData()" >
+</body>
+<script src="debounce.js"></script>
+
+ <!-- throttle is another technique to minimize unnecessary function invocations when using 
+ eventListners .However , throttle works a bit differently from debugging. instead of delaying,
+ it invokes the callback function at regular intervals as long as the event trigger is active  -->
+<!-- <script src="throttle.js"></script> -->
+
+</html>

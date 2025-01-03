@@ -1,0 +1,22 @@
+.body{
+    font-family: sans-serif;
+}
+
+#main{
+
+    width: 50%;
+    margin: 10px auto 0 auto;
+}
+
+#input-box{
+    width: 100%;
+}
+
+#suggestion-box{
+    border: 1px solid red;
+    margin-top: 10px;
+    min-height: 100px;
+    padding: 5px;
+    position: relative;
+    display: none;
+}
