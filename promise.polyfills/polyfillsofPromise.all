@@ -1,0 +1,21 @@
+export default function promiseAll(iterable) {
+  const result = new Array(iterable.length);
+    let counter = 0;
+  return new Promise((resolve ,reject)=>{
+     
+    if (iterable.length === 0) {
+      resolve(result);
+      return;
+    }
+    iterable.forEach((item, index)=>{
+      item.then((res)=>{
+        result[index]= res;
+        counter++;
+        if(counter===iterable.length){
+          resolve(result);
+        }
+      })
+      .catch(reject);
+    })
+  })  
+}
