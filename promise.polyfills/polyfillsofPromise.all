@@ -19,3 +19,33 @@ export default function promiseAll(iterable) {
     })
   })  
 }
+
+second way to do 
+
+function promiseAll(iterable) {
+    const result = [];
+    let counter = 0;
+
+    return new Promise((resolve, reject) => {
+        // Handle empty iterable
+        if (iterable.length === 0) {
+            resolve(result);
+            return;
+        }
+
+        iterable.forEach((item, index) => {
+            // Wrap non-Promise items with Promise.resolve
+            Promise.resolve(item)
+                .then((res) => {
+                    result[index] = res;
+                    counter++;
+                    if (counter === iterable.length) {
+                        resolve(result);
+                    }
+                })
+                .catch(reject);
+        });
+    });
+}
+
+
